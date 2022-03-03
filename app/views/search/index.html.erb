@@ -1,0 +1,13 @@
+<h3><%= @fuel_station.name %></h3>
+<p>Timing: <%= @fuel_station.access_times %></p>
+<p>Fuel Type: <%= @fuel_station.fuel_type %></p>
+<p>Street Address: <%= @fuel_station.street %></p>
+<p>Zip Code: <%= @fuel_station.zip %></p>
+
+<h3>Direction Information</h3>
+<p>Distance: <%= @direction_information.distance  %></p>
+<p>Time: <%= @direction_information.time %></p>
+<p>Steps:</p>
+<% @direction_information.directions.each do |narration| %>
+  <p><%= narration %></p>
+<% end %>
